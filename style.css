@@ -11,24 +11,47 @@ body{
   font-weight: 300;
 }
 
+.side-nav{
+  top: 0;
+  left:0;
+  width: 20%;
+  padding-left: 1em;
+  position: fixed;
+  height : 100%;
+  font-size: 2.5em;
+  background-color:#1A1A1A;
+  overflow-x: hidden;
+  z-index: 1;
+  border-right: solid;
+  border-color: #e1e1e1;
+  border-width: .05em;
+  display: inline;
+}
+
 #logo
 {
   height: 2em;
   margin-top: .5em;
+}
+#navDiv{
+margin-top: 1.5em;
+}
+
+.navLink
+{
+  line-height: 17vh;
+}
+
+.main
+{
+  position:fixed;
+  width: 80%;
+  right:0;
+
 }
 
 #myName
 {
   text-align: center;
   font-size: 5em;
-}
-
-.side-nav{
-  top: 5px;
-  left:0px;
-  margin-left: .2em;
-  position: fixed;
-  height = 100vh;
-  list-style: none;
-  font-size: 2.5em;
 }
