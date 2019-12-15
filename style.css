@@ -1,7 +1,7 @@
-@charset "UTF-8";
+/*Designing desktop first*/
 
 html{
-
+  position:relative;
 }
 
 body{
@@ -9,13 +9,15 @@ body{
   color: #e1e1e1;
   font-family: itc-fenice, serif;
   font-weight: 300;
+  font-size: 18px;
 }
 
-.side-nav{
+.side-nav
+{
   top: 0;
   left:0;
-  width: 20%;
-  padding-left: 1em;
+  width: 15%;
+  padding-left: 3%;
   position: fixed;
   height : 100%;
   font-size: 2.5em;
@@ -28,13 +30,81 @@ body{
   display: inline;
 }
 
+.main
+{
+  position:fixed;
+  width: 85%;
+  right:0;
+}
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (max-width: 1126px) {
+    body
+    {
+      font-size: 16px;
+    }
+
+    .side-nav
+    {
+      width:20%;
+    }
+    .main
+    {
+      width: 80%
+    }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (max-width: 768px) {
+    body
+    {
+      font-size: 14px;
+    }
+
+
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 600px) {
+    body{
+      font-size: 12px;
+    }
+    h2{
+      font-size: 10px;
+    }
+
+    .side-nav
+    {
+      width:0%;
+      padding:0;
+    }
+    .main
+    {
+      width: 100%
+    }
+  }
+
+  /*phones in portrait*/
+  @media only screen and (max-width: 320px) {
+    body{
+      font-size: 11px;
+    }
+  }
+
+
+
+
+
 #logo
 {
   height: 2em;
   margin-top: .5em;
 }
 #navDiv{
-margin-top: 1.5em;
+margin-top: 1em;
+list-style: none;
+margin-left: 0;
+padding-left: 0;
 }
 
 .navLink
@@ -42,16 +112,11 @@ margin-top: 1.5em;
   line-height: 17vh;
 }
 
-.main
-{
-  position:fixed;
-  width: 80%;
-  right:0;
 
-}
 
 #myName
 {
   text-align: center;
-  font-size: 5em;
+  font-size: 4em;
+  margin-top: 0;
 }
