@@ -8,7 +8,7 @@ body{
   background-color: #101010;
   color: #e1e1e1;
   font-family: itc-fenice, serif;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 18px;
 }
 
@@ -16,8 +16,7 @@ body{
 {
   top: 0;
   left:0;
-  width: 15%;
-  padding-left: 1em;
+  width: 20%;
   position: fixed;
   height : 100%;
   font-size: 2.5em;
@@ -33,12 +32,12 @@ body{
 .main
 {
   position:fixed;
-  width: 85%;
+  width: 80%;
   right:0;
 }
 
   /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (max-width: 1126px) {
+  @media only screen and (max-width: 992px) {
     body
     {
       font-size: 16px;
@@ -46,11 +45,11 @@ body{
 
     .side-nav
     {
-      width:20%;
+      width:30%;
     }
     .main
     {
-      width: 80%
+      width: 70%
     }
   }
 
@@ -99,12 +98,13 @@ body{
 {
   height: 2em;
   margin-top: .5em;
+  margin-left: 1em;
 }
 #navDiv{
 margin-top: 1em;
 margin-bottom: 0;
 list-style: none;
-margin-left: 0;
+margin-left: 1em;
 padding-left: 0;
 }
 
@@ -127,6 +127,55 @@ padding-left: 0;
 
 #profile
 {
-  padding-left:5em;
+  margin-left:3em;
   height: 30em;
 }
+
+#feature
+{
+  margin-top: 2em;
+}
+
+.leftcol
+{
+    width:50%;
+    float:left;
+}
+
+.rightcol
+{
+      width:50%;
+      float:right;
+
+}
+
+.making
+{
+  margin-left: 2em;
+  font-size: 3em;
+}
+
+  @media only screen and (max-width: 992px)
+  {
+    #profile
+    {
+      display: block;
+      margin:auto;
+    }
+  }
+
+  @media only screen and (max-width: 600px)
+  {
+    .making
+    {
+      font-size: ;
+    }
+
+    .leftcol, .rightcol
+    {
+     width: 100%;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+    }
+  }
