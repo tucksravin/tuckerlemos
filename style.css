@@ -147,6 +147,7 @@ padding-left: 0;
 #feature
 {
   margin-top: 2em;
+  display: flex;
 }
 
 .leftcol
@@ -162,15 +163,41 @@ padding-left: 0;
 
 }
 
+.third
+{
+  flex:33%;
+  text-align: center;
+  align-items: center;
+}
+
+.tri
+{
+  height:1em;
+  margin: 0;
+}
+
+.option
+{
+  display: block;
+  font-size: 1.5em;
+}
+
 .making
 {
   margin-left: 2em;
   font-size: 3em;
 }
 
-#bear
+#selector
 {
-  height: 8em;
+  display:flex;
+  float:none;
+  width: 100%;
+  background-color:#1A1A1A;
+  border-color: #e1e1e1;
+  border-top: solid;
+  border-bottom: solid;
+  border-width: .05em;
 }
 
   @media only screen and (max-width: 992px)
