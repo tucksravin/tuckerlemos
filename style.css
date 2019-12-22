@@ -29,11 +29,27 @@ body{
   display: inline;
 }
 
-.main
+#main
 {
-  position:fixed;
+
   width: 80%;
-  right:0;
+  float: right;
+  overflow-x: scroll;
+}
+
+.col
+{
+    width:50%;
+}
+
+.float-right
+{
+  float: right;
+}
+
+.float-left
+{
+  float: left;
 }
 
   /* Large devices (laptops/desktops, 992px and up) */
@@ -45,12 +61,14 @@ body{
 
     .side-nav
     {
-      width:30%;
+      width:25%;
     }
-    .main
+    #main
     {
-      width: 70%
+      width: 75%;
     }
+
+
   }
 
   /* Medium devices (landscape tablets, 768px and up) */
@@ -60,6 +78,11 @@ body{
       font-size: 14px;
     }
 
+    .col
+    {
+      width:100%;
+      float: none;
+    }
 
   }
 
@@ -77,10 +100,11 @@ body{
       width:0%;
       padding:0;
     }
-    .main
+    #main
     {
       width: 100%
     }
+
   }
 
   /*phones in portrait*/
@@ -136,56 +160,30 @@ padding-left: 0;
   font-size: 4em;
   margin-top: 0;
   margin-bottom: 0;
+  color: #e1e1e1;
 }
 
-#profile
+#centralImage
 {
-  margin-left:3em;
-  height: 30em;
+  width: 90%;
+  display: block;
+  margin: auto;
 }
 
 #feature
 {
   margin-top: 2em;
-  display: flex;
 }
 
-.leftcol
+h2
 {
-    width:50%;
-    float:left;
-}
-
-.rightcol
-{
-      width:50%;
-      float:right;
-
-}
-
-.third
-{
-  flex:33%;
   text-align: center;
-  align-items: center;
-}
-
-.tri
-{
-  height:1em;
-  margin: 0;
-}
-
-.option
-{
-  display: block;
-  font-size: 1.5em;
-}
-
-.making
-{
-  margin-left: 2em;
   font-size: 3em;
+}
+
+h3
+{
+  text-align: center;
 }
 
 #selector
@@ -200,6 +198,79 @@ padding-left: 0;
   border-width: .05em;
 }
 
+.third
+{
+  flex:33%;
+  text-align: center;
+  align-items: center;
+}
+
+.tri
+{
+  height:1em;
+  margin: 0;
+  cursor: pointer;
+}
+
+.option
+{
+  display: block;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+#aural
+{
+
+}
+
+#textual
+{
+
+}
+
+#visual
+{
+
+}
+
+#atri
+{
+
+}
+
+#ttri
+{
+
+}
+
+#vtri
+{
+
+}
+
+#botimages
+{
+  margin-top: 2em;
+  display: flex;
+}
+
+#bed
+{
+  width:80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#lake
+{
+  width:80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
   @media only screen and (max-width: 992px)
   {
     #profile
@@ -207,16 +278,11 @@ padding-left: 0;
       display: block;
       margin:auto;
     }
+
   }
 
   @media only screen and (max-width: 600px)
   {
 
-    .leftcol, .rightcol
-    {
-     width: 100%;
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-    }
+
   }
