@@ -178,9 +178,9 @@ var backHome = function()
 {
  whatsShowing = 0;
  main.style.color = '#e1e1e1';
- aural.style.color = '#e1e1e1';
- textual.style.color = '#e1e1e1';
- visual.style.color = '#e1e1e1';
+ aLeave();
+ tLeave();
+ vLeave();
  centralImage.src = 'images/ryelee.jpeg';
 }
 
