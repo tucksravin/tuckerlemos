@@ -1,6 +1,7 @@
 (function(){"use strict";
-
 window.onload = function(){
+
+var whatsShowing = 0;
 
 //getting all necessary elements
 
@@ -37,8 +38,8 @@ vtri.onmouseout = vLeave;
 
 //clicking on a selector
 
-aural.onclick = aClick;
-atri.onclick = aClick;
+aural.addEventListener('click', aClick);
+atri.addEventListener('click', aClick);
 
 };
 
@@ -104,17 +105,28 @@ var aClick = function()
     whatsShowing = 1;
 
     main.style.color = '#ffccff';
+    textual.style.color = '#e1e1e1';
+    visual.style.color = '#e1e1e1';
     centralImage.src = 'images/microphone.png';
-    tOne.innerHTML = 'I am';
-    tTwo.innerHTML = 'a Podcaster, Audio Editor, and Composer.';
-    tThree.innerHTML = "'Here are some of the things I've made";
+    console.log('aural');
 
   }
-  else {
+  else{
     {
-      backHome;
+      console.log('home');
+      backHome();
     }
   }
+}
+
+var backHome = function()
+{
+ whatsShowing = 0;
+ main.style.color = '#e1e1e1';
+ aural.style.color = '#e1e1e1';
+ textual.style.color = '#e1e1e1';
+ visual.style.color = '#e1e1e1';
+ centralImage.src = 'images/ryelee.jpeg';
 }
 
 })();
