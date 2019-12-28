@@ -18,6 +18,8 @@ var tOne = document.getElementById('rightTextOne');
 var tTwo = document.getElementById('rightTextTwo');
 var tThree = document.getElementById('rightTextThree');
 
+
+
 //mouseovers and outs on a selector
 aural.addEventListener('mouseover', aTouch);
 atri.addEventListener('mouseover', aTouch);
@@ -50,7 +52,7 @@ vtri.addEventListener('click', vClick);
 //tells us whats on the display of the four selectors
 // 0 is home (I make stuff)
 // 1 is Aural, 2 is Textual, 3 is Visual
-let whatsShowing = 0;
+var whatsShowing = 0;
 
 //when you touch the elements they change color
 var aTouch = function()
