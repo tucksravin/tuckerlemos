@@ -1,8 +1,6 @@
 (function(){"use strict";
 window.onload = function(){
 
-var whatsShowing = 0;
-
 //getting all necessary elements
 
 var aural = document.getElementById('aural');
@@ -21,32 +19,38 @@ var tTwo = document.getElementById('rightTextTwo');
 var tThree = document.getElementById('rightTextThree');
 
 //mouseovers and outs on a selector
-aural.onmouseover = aTouch;
-atri.onmouseover = aTouch;
-aural.onmouseout = aLeave;
-atri.onmouseout = aLeave;
+aural.addEventListener('mouseover', aTouch);
+atri.addEventListener('mouseover', aTouch);
+aural.addEventListener('mouseout', aLeave);
+atri.addEventListener('mouseout', aLeave);
 
-textual.onmouseover = tTouch;
-ttri.onmouseover = tTouch;
-textual.onmouseout = tLeave;
-ttri.onmouseout = tLeave;
+textual.addEventListener('mouseover', tTouch);
+ttri.addEventListener('mouseover', tTouch);
+textual.addEventListener('mouseout', tLeave);
+ttri.addEventListener('mouseout', tLeave);
 
-visual.onmouseover = vTouch;
-vtri.onmouseover = vTouch;
-visual.onmouseout = vLeave;
-vtri.onmouseout = vLeave;
+visual.addEventListener('mouseover', vTouch);
+vtri.addEventListener('mouseover', vTouch);
+visual.addEventListener('mouseout', vLeave);
+vtri.addEventListener('mouseout', vLeave);
 
 //clicking on a selector
 
 aural.addEventListener('click', aClick);
 atri.addEventListener('click', aClick);
 
+textual.addEventListener('click', tClick);
+ttri.addEventListener('click', tClick);
+
+visual.addEventListener('click', vClick);
+vtri.addEventListener('click', vClick);
+
 };
 
 //tells us whats on the display of the four selectors
 // 0 is home (I make stuff)
-// 1 is Aural, 2 is Textual, 3 is visual
-var whatsShowing = 0;
+// 1 is Aural, 2 is Textual, 3 is Visual
+let whatsShowing = 0;
 
 //when you touch the elements they change color
 var aTouch = function()
@@ -67,10 +71,11 @@ var vTouch = function()
   vtri.src = 'images/vtriangle.png';
 };
 
-//and when you mouse off they revert, unless it's in their setup
+//and when you mouse off they revert, unless it's in their main
 var aLeave = function()
 {
-  if(whatsShowing=!1)
+
+  if(whatsShowing!=1)
   {
     aural.style.color = '#e1e1e1';
     atri.src = 'images/triangle.png';
@@ -88,15 +93,15 @@ var tLeave = function()
 
 var vLeave = function()
 {
-  if(whatsShowing!=1)
+  if(whatsShowing!=3)
   {
     visual.style.color = '#e1e1e1';
     vtri.src = 'images/triangle.png';
   }
 };
 
-//on clicking a selector, the whole website changes,
-//showing a different image and all is slightly colored
+//on clicking a selector, we change to one of four modes,
+//showing a different image and all is slightly colored, with diff text
 
 var aClick = function()
 {
@@ -108,7 +113,55 @@ var aClick = function()
     textual.style.color = '#e1e1e1';
     visual.style.color = '#e1e1e1';
     centralImage.src = 'images/microphone.png';
+    tLeave();
+    vLeave();
     console.log('aural');
+
+  }
+  else{
+    {
+      console.log('home');
+      backHome();
+    }
+  }
+}
+
+var tClick = function()
+{
+  if(whatsShowing!=2)
+  {
+    whatsShowing = 2;
+
+    main.style.color = "#ccffff";
+    textual.style.color = '#e1e1e1';
+    visual.style.color = '#e1e1e1';
+    centralImage.src = 'images/rhodia.jpg';
+    aLeave();
+    vLeave();
+    console.log('textual');
+
+  }
+  else{
+    {
+      console.log('home');
+      backHome();
+    }
+  }
+}
+
+var tClick = function()
+{
+  if(whatsShowing!=3)
+  {
+    whatsShowing = 3;
+
+    main.style.color = "#ccffff";
+    textual.style.color = '#e1e1e1';
+    visual.style.color = '#e1e1e1';
+    centralImage.src = 'images/rhodia.jpg';
+    aLeave();
+    vLeave();
+    console.log('textual');
 
   }
   else{
