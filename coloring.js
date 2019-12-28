@@ -149,19 +149,19 @@ var tClick = function()
   }
 }
 
-var tClick = function()
+var vClick = function()
 {
   if(whatsShowing!=3)
   {
     whatsShowing = 3;
 
-    main.style.color = "#ccffff";
+    main.style.color = "#ffffcc";
     textual.style.color = '#e1e1e1';
     visual.style.color = '#e1e1e1';
-    centralImage.src = 'images/rhodia.jpg';
+    centralImage.src = 'images/a6000.png';
     aLeave();
-    vLeave();
-    console.log('textual');
+    tLeave();
+    console.log('visual');
 
   }
   else{
