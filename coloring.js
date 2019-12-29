@@ -14,10 +14,9 @@ var vtri = document.getElementById('vtri');
 
 var main = document.getElementById('main');
 var centralImage = document.getElementById('centralImage');
-var tOne = document.getElementById('rightTextOne');
-var tTwo = document.getElementById('rightTextTwo');
-var tThree = document.getElementById('rightTextThree');
 
+var iAmA = document.getElementById('iAmA');
+var thingsIDo = document.getElementById('thingsIDo');
 
 
 //mouseovers and outs on a selector
@@ -114,6 +113,8 @@ var aClick = function()
     main.style.color = '#ffccff';
     textual.style.color = '#e1e1e1';
     visual.style.color = '#e1e1e1';
+    iAmA.innerHTML = 'I am';
+    thingsIDo.innerHTML = 'a Podcaster, Audio Producer and Composer';
     centralImage.src = 'images/microphone.png';
     tLeave();
     vLeave();
@@ -137,6 +138,8 @@ var tClick = function()
     main.style.color = "#ccffff";
     textual.style.color = '#e1e1e1';
     visual.style.color = '#e1e1e1';
+    iAmA.innerHTML = 'I am';
+    thingsIDo.innerHTML = 'a Writer';
     centralImage.src = 'images/rhodia.jpg';
     aLeave();
     vLeave();
@@ -161,6 +164,8 @@ var vClick = function()
     textual.style.color = '#e1e1e1';
     visual.style.color = '#e1e1e1';
     centralImage.src = 'images/a6000.png';
+    iAmA.innerHTML = 'I am';
+    thingsIDo.innerHTML = 'a Web Designer, Photographer, and Video Editor';
     aLeave();
     tLeave();
     console.log('visual');
@@ -182,6 +187,8 @@ var backHome = function()
  tLeave();
  vLeave();
  centralImage.src = 'images/ryelee.jpeg';
+ iAmA.innerHTML = '';
+ thingsIDo.innerHTML = '';
 }
 
 })();
