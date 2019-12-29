@@ -56,7 +56,7 @@ var whatsShowing = 0;
 //when you touch the elements they change color
 var aTouch = function()
 {
-  aural.style.color = "#ffccff";
+  aural.style.color = '#ccffcc';
   atri.src = 'images/atriangle.png';
 };
 
@@ -110,7 +110,7 @@ var aClick = function()
   {
     whatsShowing = 1;
 
-    main.style.color = '#ffccff';
+    main.style.color = '#ccffcc';
     textual.style.color = '#e1e1e1';
     visual.style.color = '#e1e1e1';
     iAmA.innerHTML = 'I am';

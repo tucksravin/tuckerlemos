@@ -1,10 +1,12 @@
 /*Designing desktop first*/
 
-html{
+html
+{
   position:relative;
 }
 
-body{
+body
+{
   background-color: #101010;
   color: #e1e1e1;
   font-family: itc-fenice, serif;
@@ -31,7 +33,6 @@ body{
 
 #main
 {
-
   width: 80%;
   float: right;
   overflow-x: scroll;
@@ -58,85 +59,76 @@ h2
   font-size: 3em;
 }
 
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (max-width: 992px) {
-    body
-    {
-      font-size: 16px;
-    }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px)
+{
+  body
+  {
+    font-size: 16px;
+  }
+  .side-nav
+  {
+    width:25%;
+  }
+  #main
+  {
+    width: 75%;
+  }
+  h2
+  {
+    font-size: 2.5em;
+  }
+}
 
-    .side-nav
-    {
-      width:25%;
-    }
-    #main
-    {
-      width: 75%;
-    }
+@media only screen and (max-width: 768px)
+{
+  body
+  {
+    font-size: 14px;
+  }
+}
 
-    h2
-    {
-      font-size: 2.5em;
-    }
-
-
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px)
+{
+  body
+  {
+    font-size: 14px;
   }
 
-  @media only screen and (max-width: 768px) {
-    body
-    {
-      font-size: 14px;
-    }
-
-
-
+  .col
+  {
+    width:100%;
+    float: none;
   }
+}
 
-
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (max-width: 768px) {
-    body
-    {
-      font-size: 14px;
-    }
-
-    .col
-    {
-      width:100%;
-      float: none;
-    }
-
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px)
+{
+  body
+  {
+    font-size: 12px;
   }
-
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (max-width: 600px) {
-    body{
-      font-size: 12px;
-    }
-
-
-    .side-nav
-    {
-      width:0%;
-      padding:0;
-    }
-    #main
-    {
-      width: 100%
-    }
-
+  .side-nav
+  {
+    width:0%;
+    padding:0;
   }
-
-  /*phones in portrait*/
-  @media only screen and (max-width: 320px) {
-    body{
-      font-size: 11px;
-    }
+  #main
+  {
+    width: 100%
   }
+}
 
-
-
-
+/*phones in portrait*/
+@media only screen and (max-width: 320px)
+{
+  body
+  {
+    font-size: 11px;
+  }
+}
 
 .logo
 {
@@ -156,12 +148,13 @@ h2
   height: 2.5em;
 }
 
-#navDiv{
-margin-top: 7.25em;
-margin-bottom: 0;
-list-style: none;
-margin-left: 2.5em;
-padding-left: 0;
+#navDiv
+{
+  margin-top: 7.25em;
+  margin-bottom: 0;
+  list-style: none;
+  margin-left: 2.5em;
+  padding-left: 0;
 }
 
 .navLink
@@ -257,64 +250,46 @@ h3
   cursor: pointer;
 }
 
-#aural
-{
 
-}
 
-#textual
-{
-
-}
-
-#visual
-{
-
-}
-
-#atri
-{
-
-}
-
-#ttri
-{
-
-}
-
-#vtri
-{
-
-}
-
-#botimages
+#botImages
 {
   margin-top: 2em;
   display: flex;
 }
 
-#bed
+.botImage
 {
   width:80%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2em;
 }
 
-#lake
+@media only screen and (max-width: 992px)
 {
-  width:80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-  @media only screen and (max-width: 992px)
+  #profile
   {
-    #profile
-    {
-      display: block;
-      margin:auto;
-    }
-
+    display: block;
+    margin:auto;
   }
+}
+
+#foot
+{
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+#homeLink
+{
+  text-decoration: none;
+  color: inherit;
+}
+
+#homeLink:hover
+{
+  color: #9F9C99;
+}
