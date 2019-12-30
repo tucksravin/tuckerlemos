@@ -254,17 +254,18 @@ h3
 
 #botImages
 {
-  margin-top: 2em;
+  align-items: center;
   display: flex;
+  margin-bottom: .7em;
 }
 
 .botImage
 {
-  width:80%;
+  width:95%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
+  margin: auto;
+  margin-top: 1.5em;
+  display: block;
 }
 
 @media only screen and (max-width: 992px)
@@ -276,20 +277,29 @@ h3
   }
 }
 
-#foot
+footer
 {
-  margin-top: 1em;
-  width: 100%;
   text-align: center;
+  height: 1.5em;
+  font-size: .7em;
 }
+
 
 #homeLink
 {
+  padding-top: 2em;
   text-decoration: none;
-  color: inherit;
+  color: #e1e1e1;
 }
 
 #homeLink:hover
 {
   color: #9F9C99;
+}
+
+#copyright
+{
+position: absolute;
+right: 2px;
+
 }
