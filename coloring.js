@@ -1,4 +1,4 @@
-(function(){"use strict";
+
 window.onload = function(){
 
 //getting all necessary elements
@@ -190,5 +190,3 @@ var backHome = function()
  iAmA.innerHTML = '';
  thingsIDo.innerHTML = '';
 }
-
-})();

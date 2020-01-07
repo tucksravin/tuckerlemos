@@ -26,17 +26,19 @@
     <!-- logo behind sidenav-->
 
     <div id='logoRightContainer'>
-      <img src='images/logo.png' alt='Incidental Fox' class='logo' id='babylogo'/>
+      <img src='images/logo.png' alt='Incidental Fox' class='logo' id='babylogo' onclick='openSideNav()'/>
     </div>
 
 
-    <div class="side-nav">
+    <div id="sideNav">
 
       <!-- logo in sidenav -->
       <div id="logoLeftContainer">
-        <img src='images/logo.png' alt='An Incidental Fox' class='logo' id='staticNavLogo'/>
-        <img src='images/foxToTheLeft.gif' alt='animated Logo' class='logo logoAnim'id='foxToTheLeft'/>
-        <img src='images/foxFromTheLeft.gif' alt='animated Logo' class='logo logoAnim'id='foxFromTheLeft'/>
+        <img src='images/logo.png' alt='An Incidental Fox' class='logo' id='staticNavLogo' onmouseover="toTheLeft()" onmouseout='fromTheLeft()' onclick='closeSideNav()'/>
+        <!--
+          <img src='images/foxToTheLeft.gif' alt='animated Logo' class='logo logoAnim'id='foxToTheLeft'/>
+          <img src='images/foxFromTheLeft.gif' alt='animated Logo' class='logo logoAnim'id='foxFromTheLeft'/>
+        -->
       </div>
 
       <ul id='navDiv'>
