@@ -4,6 +4,21 @@ window.onload = function()
   rightFox = document.getElementById('logoRightContainer');
   sideNav = document.getElementById('sideNav');
   main = document.getElementById('main');
+  logos = document.getElementsByClassName('logo');
+
+  if(window.innerWidth<600)
+  {
+    sideNav.style.width = '0%';
+    main.style.width = '100%';
+  }
+}
+
+window.onresize = function()
+{
+  if(sideNav.style.width!='0%')
+  {
+    openSideNav();
+  }
 }
 
 //start animation to the left, after half a second
@@ -28,11 +43,32 @@ function fromTheLeft()
     }, 1500);
 }
 
+function toTheRight()
+{
+  setTimeout(
+    function(){
+      rightFox.innerHTML = "<img src='images/foxToTheRight.gif' alt='animated Logo' class='logo'id='foxToTheRight' onmouseout='fromTheRight()' onclick='openSideNav()'/>";
+      document.getElementById('foxToTheRight').src = 'images/foxToTheRight.gif'+'?a='+Math.random();
+    }, 500);
+
+}
+
+function fromTheRight()
+{
+  setTimeout(
+    function(){
+      rightFox.innerHTML = "<img src='images/foxFromTheRight.gif' alt='animated Logo' class='logo'id='foxFromTheRight' onmouseover='toTheRight()' onmouseout='fromTheRight()' onclick='openSideNav()'/>";
+      document.getElementById('foxFromTheRight').src = 'images/foxFromTheRight.gif'+'?a='+Math.random();
+    }, 1500);
+
+}
+
 //closes side nav after clicking the left fox
 function closeSideNav()
 {
   sideNav.style.width = '0%';
   main.style.width = '100%';
+
 }
 
 //opens sideNav, 100% on smaller tablets and whatever breakpoints I set in style.css otherwise.
@@ -42,6 +78,7 @@ function openSideNav()
   if(w<600)
     {
       sideNav.style.width = '100%';
+      fullScreenSideNav();
     }
   else if(w<992)
     {
@@ -53,4 +90,13 @@ function openSideNav()
       sideNav.style.width = '20%';
       main.style.width = '80%';
     }
+
+  logo.style.height = '4em';
+  
   }
+
+//centers nav text for cases when the nav is fullScreenSideNav
+function fullScreenSideNav()
+{
+  sideNav.style.text-align
+}
