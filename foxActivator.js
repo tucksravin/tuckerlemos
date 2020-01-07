@@ -6,9 +6,9 @@ var rightFox = document.getElementById('logoRightContainer');
 
 var staticNavLogo = document.getElementById('staticNavLogo');
 
-staticNavLogo.addEventListener('mouseover', see);
+staticNavLogo.addEventListener('mouseover',amListening);
 
-var see = function()
+var amListening = function()
 {
   console.log('worked');
 };
