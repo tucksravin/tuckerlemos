@@ -19,6 +19,7 @@ window.onresize = function()
   {
     openSideNav();
   }
+
 }
 
 //start animation to the left, after half a second
@@ -92,11 +93,11 @@ function openSideNav()
     }
 
   logo.style.height = '4em';
-  
+
   }
 
 //centers nav text for cases when the nav is fullScreenSideNav
 function fullScreenSideNav()
 {
-  sideNav.style.text-align
+  
 }
