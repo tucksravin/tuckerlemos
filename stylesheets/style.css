@@ -1,12 +1,9 @@
 /*Designing desktop first*/
-
-html
-{
-  position:relative;
+html {
+  position: relative;
 }
 
-body
-{
+body {
   background-color: #101010;
   color: #e1e1e1;
   font-family: itc-fenice, serif;
@@ -14,166 +11,136 @@ body
   font-size: 18px;
 }
 
-#sideNav
-{
+#sideNav {
   top: 0;
-  left:0;
+  left: 0;
   width: 20%;
   position: fixed;
-  height : 100%;
-
-  background-color:#1A1A1A;
+  height: 100%;
+  background-color: #1A1A1A;
   overflow-x: hidden;
   z-index: 2;
   border-right: solid;
   border-color: #e1e1e1;
-  border-width: .05em;
+  border-width: 0.05em;
   display: inline;
-
   transition: 0.7s;
 }
 
-#main
-{
+#main {
   width: 80%;
   float: right;
   overflow-x: scroll;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  transition: 0.7s;
 }
 
-.content
-{
-  flex:1;
-}
-.col
-{
-    width:50%;
+.content {
+  flex: 1;
 }
 
-.float-right
-{
+.col {
+  width: 50%;
+}
+
+.float-right {
   float: right;
 }
 
-.float-left
-{
+.float-left {
   float: left;
 }
 
-h2
-{
+h2 {
   text-align: center;
   font-size: 3em;
   font-style: normal;
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px)
-{
-  body
-  {
+@media only screen and (max-width: 992px) {
+  body {
     font-size: 16px;
   }
-  .side-nav
-  {
-    width:25%;
+
+  .side-nav {
+    width: 25%;
   }
-  #main
-  {
+
+  #main {
     width: 75%;
   }
-  h2
-  {
+
+  h2 {
     font-size: 2.5em;
   }
 }
-
-@media only screen and (max-width: 768px)
-{
-  body
-  {
+@media only screen and (max-width: 768px) {
+  body {
     font-size: 14px;
   }
 }
-
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px)
-{
-  body
-  {
+@media only screen and (max-width: 768px) {
+  body {
     font-size: 14px;
   }
 
-  .col
-  {
-    width:100%;
+  .col {
+    width: 100%;
     float: none;
   }
 }
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px)
-{
-  body
-  {
+@media only screen and (max-width: 600px) {
+  body {
     font-size: 12px;
   }
-  .side-nav
-  {
-    width:0%;
-    padding:0;
+
+  .side-nav {
+    width: 0;
+    padding: 0;
   }
-  #main
-  {
-    width: 100%
+
+  #main {
+    width: 100%;
   }
 }
-
 /*phones in portrait*/
-@media only screen and (max-width: 320px)
-{
-  body
-  {
+@media only screen and (max-width: 320px) {
+  body {
     font-size: 11px;
   }
 }
-
-.logo
-{
+.logo {
   top: 0;
   left: 0;
   height: 6em;
-  margin-top: .1em;
+  margin-top: 0.1em;
   margin-left: 2.5em;
   position: absolute;
   z-index: 1;
 }
-@media only screen and (max-width: 600px)
-{
-  .logo
-  {
+
+@media only screen and (max-width: 600px) {
+  .logo {
     height: 4em;
     margin-top: 1.1em;
-    margin-left: .2em;
+    margin-left: 0.2em;
   }
 }
-
-.logo:hover
-{
+.logo:hover {
   opacity: 60%;
   cursor: pointer;
 }
 
-#babylogo
-{
-  margin-left: .5em;
+#babylogo {
+  margin-left: 0.5em;
 }
 
-
-#navDiv
-{
+#navDiv {
   margin-top: 6.25em;
   margin-bottom: 0;
   list-style: none;
@@ -181,22 +148,18 @@ h2
   padding-left: 0;
 }
 
-.navLink
-{
+.navLink {
   line-height: 17vh;
   text-decoration: none;
   color: inherit;
   font-size: 2.5em;
 }
 
-.navLink:hover
-{
+.navLink:hover {
   color: #9F9C99;
 }
 
-
-#myName
-{
+#myName {
   text-align: center;
   font-size: 4em;
   margin-top: 0;
@@ -205,55 +168,42 @@ h2
   /*font-weight: normal; */
 }
 
-@media only screen and (max-width: 380px)
-{
-  #title
-  {
+@media only screen and (max-width: 380px) {
+  #title {
     margin-left: 3em;
     margin-right: 3em;
   }
 }
-
-@media only screen and (max-width: 600px)
-{
-
-  #myName
-  {
+@media only screen and (max-width: 600px) {
+  #myName {
     font-size: 3.5em;
   }
 }
-
-footer
-{
+footer {
   text-align: center;
   height: 1.5em;
-  font-size: .7em;
+  font-size: 0.7em;
 }
 
-
-#homeLink
-{
+#homeLink {
   padding-top: 2em;
   text-decoration: none;
   color: #e1e1e1;
 }
 
-@media only screen and (max-width: 600px)
-{
-  footer
-  {
+@media only screen and (max-width: 600px) {
+  footer {
     text-align: left;
   }
 }
-
-#homeLink:hover
-{
+#homeLink:hover {
   color: #9F9C99;
 }
 
-#copyright
-{
-position: absolute;
-right: 2px;
-color: #ebebeb;
+#copyright {
+  position: absolute;
+  right: 2px;
+  color: #ebebeb;
 }
+
+/*# sourceMappingURL=style.css.map */

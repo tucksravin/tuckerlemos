@@ -1,11 +1,19 @@
 window.onload = function()
 {
-  leftFox = document.getElementById('logoLeftContainer');
-  rightFox = document.getElementById('logoRightContainer');
-  sideNav = document.getElementById('sideNav');
-  main = document.getElementById('main');
-  logos = document.getElementsByClassName('logo');
+  var sideNav = document.getElementById('sideNav');
+  var main = document.getElementById('main');
+  var subLogo = document.getElementById('subLogo');
+  var supLogo = document.getElementById('supLogo');
 
+  subLogo.addEventListener('mouseover', toTheRight);
+  subLogo.addEventListener('mouseout', fromTheRight);
+  subLogo.addEventListener('click', openSideNav);
+
+  supLogo.addEventListener('mouseover', toTheLeft);
+  supLogo.addEventListener('mouseout', fromTheLeft);
+  supLogo.addEventListener('click', closeSideNav);
+
+  //closes side nav if the window gets to small
   if(window.innerWidth<600)
   {
     sideNav.style.width = '0%';
@@ -15,6 +23,7 @@ window.onload = function()
 
 window.onresize = function()
 {
+  //adjusts size of sideNav if it is open
   if(sideNav.style.width!='0%')
   {
     openSideNav();
@@ -24,42 +33,63 @@ window.onresize = function()
 
 //start animation to the left, after half a second
 //the second line randomizes the gif name so it resets the animation each time.
-function toTheLeft()
+var toTheLeft = function()
 {
+  var leftFox = document.getElementById('logoLeftContainer');
+
   setTimeout(
     function(){
-    leftFox.innerHTML = "<img src='images/foxToTheLeft.gif' alt='animated Logo' class='logo'id='foxToTheLeft' onmouseout='fromTheLeft()' onclick='closeSideNav()'/>";
-    document.getElementById('foxToTheLeft').src = 'images/foxToTheLeft.gif'+'?a='+Math.random();
+    leftFox.innerHTML = "<img src='images/foxToTheLeft.gif' alt='animated Logo' class='logo'id='supLogo'/>";
+    document.getElementById('supLogo').src = 'images/foxToTheLeft.gif'+'?a='+Math.random();
+    var supLogo = document.getElementById('supLogo');
+    supLogo.addEventListener('mouseout', fromTheLeft);
+    supLogo.addEventListener('click', closeSideNav);
   }, 500);
 
 };
 
 //returns from left arrow to logo, half a second after mouseout
-function fromTheLeft()
+var fromTheLeft = function()
 {
+  var leftFox = document.getElementById('logoLeftContainer');
+
   setTimeout(
     function(){
-      leftFox.innerHTML = "<img src='images/foxFromTheLeft.gif' alt='animated Logo' class='logo'id='foxFromTheLeft' onmouseover='toTheLeft()' onmouseout='fromTheLeft()' onclick='closeSideNav()'/>";
-      document.getElementById('foxFromTheLeft').src = 'images/foxFromTheLeft.gif'+'?a='+Math.random();
+      leftFox.innerHTML = "<img src='images/foxFromTheLeft.gif' alt='animated Logo' class='logo'id='supLogo'/>";
+      document.getElementById('supLogo').src = 'images/foxFromTheLeft.gif'+'?a='+Math.random();
+      var supLogo = document.getElementById('supLogo');
+      supLogo.addEventListener('mouseover', toTheLeft);
+      supLogo.addEventListener('mouseout', fromTheLeft);
+      supLogo.addEventListener('click', closeSideNav);
     }, 1500);
 }
 
-function toTheRight()
+var toTheRight = function()
 {
+  var rightFox = document.getElementById('logoRightContainer');
+
   setTimeout(
     function(){
-      rightFox.innerHTML = "<img src='images/foxToTheRight.gif' alt='animated Logo' class='logo'id='foxToTheRight' onmouseout='fromTheRight()' onclick='openSideNav()'/>";
-      document.getElementById('foxToTheRight').src = 'images/foxToTheRight.gif'+'?a='+Math.random();
+      rightFox.innerHTML = "<img src='images/foxToTheRight.gif' alt='animated Logo' class='logo'id='subLogo' onmouseout='fromTheRight()' onclick='openSideNav()'/>";
+      document.getElementById('subLogo').src = 'images/foxToTheRight.gif'+'?a='+Math.random();
+      var subLogo = document.getElementById('subLogo');
+      subLogo.addEventListener('mouseout', fromTheRight);
+      subLogo.addEventListener('click', openSideNav);
     }, 500);
-
 }
 
-function fromTheRight()
+var fromTheRight = function()
 {
+  var rightFox = document.getElementById('logoRightContainer');
+
   setTimeout(
     function(){
-      rightFox.innerHTML = "<img src='images/foxFromTheRight.gif' alt='animated Logo' class='logo'id='foxFromTheRight' onmouseover='toTheRight()' onmouseout='fromTheRight()' onclick='openSideNav()'/>";
-      document.getElementById('foxFromTheRight').src = 'images/foxFromTheRight.gif'+'?a='+Math.random();
+      rightFox.innerHTML = "<img src='images/foxFromTheRight.gif' alt='animated Logo' class='logo'id='subLogo'/>";
+      document.getElementById('subLogo').src = 'images/foxFromTheRight.gif'+'?a='+Math.random();
+      var subLogo = document.getElementById('subLogo');
+      subLogo.addEventListener('mouseover', toTheRight);
+      subLogo.addEventListener('mouseout', fromTheRight);
+      subLogo.addEventListener('click', openSideNav);
     }, 1500);
 
 }
@@ -74,7 +104,7 @@ function closeSideNav()
 
 //opens sideNav, 100% on smaller tablets and whatever breakpoints I set in style.css otherwise.
 function openSideNav()
-  {
+{
   var w = window.innerWidth;
   if(w<600)
     {
@@ -92,12 +122,10 @@ function openSideNav()
       main.style.width = '80%';
     }
 
-  logo.style.height = '4em';
-
-  }
+}
 
 //centers nav text for cases when the nav is fullScreenSideNav
 function fullScreenSideNav()
 {
-  
+
 }

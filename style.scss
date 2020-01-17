@@ -1,0 +1,261 @@
+/*Designing desktop first*/
+
+html
+{
+  position:relative;
+}
+
+body
+{
+  background-color: #101010;
+  color: #e1e1e1;
+  font-family: itc-fenice, serif;
+  font-weight: 200;
+  font-size: 18px;
+
+}
+
+#sideNav
+{
+  top: 0;
+  left:0;
+  width: 20%;
+  position: fixed;
+  height : 100%;
+
+  background-color:#1A1A1A;
+  overflow-x: hidden;
+  z-index: 2;
+  border-right: solid;
+  border-color: #e1e1e1;
+  border-width: .05em;
+  display: inline;
+transition: 0.7s;
+
+}
+
+#main
+{
+  width: 80%;
+  float: right;
+  overflow-x: scroll;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  transition: 0.7s;
+}
+
+.content
+{
+  flex:1;
+}
+.col
+{
+    width:50%;
+}
+
+.float-right
+{
+  float: right;
+}
+
+.float-left
+{
+  float: left;
+}
+
+h2
+{
+  text-align: center;
+  font-size: 3em;
+  font-style: normal;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px)
+{
+  body
+  {
+    font-size: 16px;
+  }
+  .side-nav
+  {
+    width:25%;
+  }
+  #main
+  {
+    width: 75%;
+  }
+  h2
+  {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 768px)
+{
+  body
+  {
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px)
+{
+  body
+  {
+    font-size: 14px;
+  }
+
+  .col
+  {
+    width:100%;
+    float: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px)
+{
+  body
+  {
+    font-size: 12px;
+  }
+  .side-nav
+  {
+    width:0;
+    padding:0;
+  }
+  #main
+  {
+    width: 100%
+  }
+}
+
+/*phones in portrait*/
+@media only screen and (max-width: 320px)
+{
+  body
+  {
+    font-size: 11px;
+  }
+}
+
+.logo
+{
+  top: 0;
+  left: 0;
+  height: 6em;
+  margin-top: .1em;
+  margin-left: 2.5em;
+  position: absolute;
+  z-index: 1;
+}
+@media only screen and (max-width: 600px)
+{
+  .logo
+  {
+    height: 4em;
+    margin-top: 1.1em;
+    margin-left: .2em;
+  }
+}
+
+.logo:hover
+{
+  opacity: 60%;
+  cursor: pointer;
+}
+
+#babylogo
+{
+  margin-left: .5em;
+}
+
+
+#navDiv
+{
+  margin-top: 6.25em;
+  margin-bottom: 0;
+  list-style: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+
+.navLink
+{
+  line-height: 17vh;
+  text-decoration: none;
+  color: inherit;
+  font-size: 2.5em;
+}
+
+.navLink:hover
+{
+  color: #9F9C99;
+}
+
+
+#myName
+{
+  text-align: center;
+  font-size: 4em;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #e1e1e1;
+  /*font-weight: normal; */
+}
+
+@media only screen and (max-width: 380px)
+{
+  #title
+  {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+}
+
+@media only screen and (max-width: 600px)
+{
+
+  #myName
+  {
+    font-size: 3.5em;
+  }
+}
+
+footer
+{
+  text-align: center;
+  height: 1.5em;
+  font-size: .7em;
+}
+
+
+#homeLink
+{
+  padding-top: 2em;
+  text-decoration: none;
+  color: #e1e1e1;
+}
+
+@media only screen and (max-width: 600px)
+{
+  footer
+  {
+    text-align: left;
+  }
+}
+
+#homeLink:hover
+{
+  color: #9F9C99;
+}
+
+#copyright
+{
+position: absolute;
+right: 2px;
+color: #ebebeb;
+}
