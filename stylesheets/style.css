@@ -1,8 +1,11 @@
 /*Designing desktop first*/
+/*color vars*/
+/* line 9, ../sass/style.scss */
 html {
   position: relative;
 }
 
+/* line 14, ../sass/style.scss */
 body {
   background-color: #101010;
   color: #e1e1e1;
@@ -11,6 +14,7 @@ body {
   font-size: 18px;
 }
 
+/* line 24, ../sass/style.scss */
 #sideNav {
   top: 0;
   left: 0;
@@ -22,11 +26,12 @@ body {
   z-index: 2;
   border-right: solid;
   border-color: #e1e1e1;
-  border-width: 0.05em;
+  border-width: .05em;
   display: inline;
   transition: 0.7s;
 }
 
+/* line 43, ../sass/style.scss */
 #main {
   width: 80%;
   float: right;
@@ -37,22 +42,27 @@ body {
   transition: 0.7s;
 }
 
+/* line 54, ../sass/style.scss */
 .content {
   flex: 1;
 }
 
+/* line 58, ../sass/style.scss */
 .col {
   width: 50%;
 }
 
+/* line 63, ../sass/style.scss */
 .float-right {
   float: right;
 }
 
+/* line 68, ../sass/style.scss */
 .float-left {
   float: left;
 }
 
+/* line 73, ../sass/style.scss */
 h2 {
   text-align: center;
   font-size: 3em;
@@ -61,33 +71,40 @@ h2 {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
+  /* line 83, ../sass/style.scss */
   body {
     font-size: 16px;
   }
 
+  /* line 87, ../sass/style.scss */
   .side-nav {
     width: 25%;
   }
 
+  /* line 91, ../sass/style.scss */
   #main {
     width: 75%;
   }
 
+  /* line 95, ../sass/style.scss */
   h2 {
     font-size: 2.5em;
   }
 }
 @media only screen and (max-width: 768px) {
+  /* line 103, ../sass/style.scss */
   body {
     font-size: 14px;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
+  /* line 112, ../sass/style.scss */
   body {
     font-size: 14px;
   }
 
+  /* line 117, ../sass/style.scss */
   .col {
     width: 100%;
     float: none;
@@ -95,51 +112,60 @@ h2 {
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
+  /* line 127, ../sass/style.scss */
   body {
     font-size: 12px;
   }
 
+  /* line 131, ../sass/style.scss */
   .side-nav {
     width: 0;
     padding: 0;
   }
 
+  /* line 136, ../sass/style.scss */
   #main {
     width: 100%;
   }
 }
 /*phones in portrait*/
 @media only screen and (max-width: 320px) {
+  /* line 145, ../sass/style.scss */
   body {
     font-size: 11px;
   }
 }
+/* line 151, ../sass/style.scss */
 .logo {
   top: 0;
   left: 0;
   height: 6em;
-  margin-top: 0.1em;
+  margin-top: .1em;
   margin-left: 2.5em;
   position: absolute;
   z-index: 1;
 }
 
 @media only screen and (max-width: 600px) {
+  /* line 163, ../sass/style.scss */
   .logo {
     height: 4em;
     margin-top: 1.1em;
-    margin-left: 0.2em;
+    margin-left: .2em;
   }
 }
+/* line 171, ../sass/style.scss */
 .logo:hover {
   opacity: 60%;
   cursor: pointer;
 }
 
+/* line 177, ../sass/style.scss */
 #babylogo {
-  margin-left: 0.5em;
+  margin-left: .5em;
 }
 
+/* line 183, ../sass/style.scss */
 #navDiv {
   margin-top: 6.25em;
   margin-bottom: 0;
@@ -148,6 +174,7 @@ h2 {
   padding-left: 0;
 }
 
+/* line 192, ../sass/style.scss */
 .navLink {
   line-height: 17vh;
   text-decoration: none;
@@ -155,10 +182,12 @@ h2 {
   font-size: 2.5em;
 }
 
+/* line 200, ../sass/style.scss */
 .navLink:hover {
   color: #9F9C99;
 }
 
+/* line 206, ../sass/style.scss */
 #myName {
   text-align: center;
   font-size: 4em;
@@ -169,22 +198,26 @@ h2 {
 }
 
 @media only screen and (max-width: 380px) {
+  /* line 218, ../sass/style.scss */
   #title {
     margin-left: 3em;
     margin-right: 3em;
   }
 }
 @media only screen and (max-width: 600px) {
+  /* line 228, ../sass/style.scss */
   #myName {
     font-size: 3.5em;
   }
 }
+/* line 234, ../sass/style.scss */
 footer {
   text-align: center;
   height: 1.5em;
-  font-size: 0.7em;
+  font-size: .7em;
 }
 
+/* line 242, ../sass/style.scss */
 #homeLink {
   padding-top: 2em;
   text-decoration: none;
@@ -192,18 +225,19 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  /* line 251, ../sass/style.scss */
   footer {
     text-align: left;
   }
 }
+/* line 257, ../sass/style.scss */
 #homeLink:hover {
   color: #9F9C99;
 }
 
+/* line 262, ../sass/style.scss */
 #copyright {
   position: absolute;
   right: 2px;
-  color: #ebebeb;
+  color: #e1e1e1;
 }
-
-/*# sourceMappingURL=style.css.map */
